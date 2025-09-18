@@ -44,6 +44,7 @@ if __name__ == '__main__':
         residues = get_reference_residues(args.reference)
 
     if os.path.isdir(args.input):
+        # use all files in given directory
         for input_file in os.listdir(args.input):
             print(f'Processing {input_file}')
             output = f"{input_file.split('.')[0]}-out.pdb"
